@@ -1,0 +1,10 @@
+resource "panos_security_rule" "allow_ssh" {
+  name                 = "allow-ssh"
+  description          = "Allow SSH traffic from trust to untrust zones"
+  source_zones         = ["trust"]
+  destination_zones    = ["untrust"]
+  source_addresses     = ["any"]
+  destination_addresses = ["any"]
+  application          = ["ssh"]
+  action               = "allow"
+}
