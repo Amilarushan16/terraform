@@ -1,0 +1,5 @@
+provider "panos" {
+  hostname = "your-firewall-ip"
+  username = "your-username"
+  password = "your-password"
+}
